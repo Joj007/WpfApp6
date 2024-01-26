@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfApp4.Bekeres"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="Bekeres" Height="450" Width="800" Closing="Window_Closing"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/stilus/elemek.xaml"/>
+                <ResourceDictionary Source="/stilus/szinek.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border CornerRadius="10" BorderThickness="2">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="{StaticResource borderszin1}" Offset="0"/>
+                <GradientStop Color="{StaticResource borderszin3}" Offset="0.5"/>
+                <GradientStop Color="{StaticResource borderszin2}" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Border.Background>
+            <SolidColorBrush Color="{StaticResource borderszin4}"></SolidColorBrush>
+        </Border.Background>
+    <Grid>
+        <StackPanel>
+            <TextBox Style="{StaticResource tbStilus}" x:Name="txtOm"></TextBox>
+            <TextBox Style="{StaticResource tbStilus}" x:Name="txtNev"></TextBox>
+            <TextBox Style="{StaticResource tbStilus}" x:Name="txtEmail"></TextBox>
+            <DatePicker Style="{StaticResource dpStilus}" x:Name="txtDatum"></DatePicker>
+            <TextBox Style="{StaticResource tbStilus}" x:Name="txtCim"></TextBox>
+            <TextBox Style="{StaticResource tbStilus}" x:Name="txtMatek"></TextBox>
+            <TextBox Style="{StaticResource tbStilus}" x:Name="txtMagyar"></TextBox>
+        </StackPanel>
+        <StackPanel>
+        <Label Style="{StaticResource lblStilus}">OM azonsoító</Label>
+        <Label Style="{StaticResource lblStilus}">Név</Label>
+        <Label Style="{StaticResource lblStilus}">Email</Label>
+        <Label Style="{StaticResource lblStilus}">Születési dátum</Label>
+        <Label Style="{StaticResource lblStilus}">Értesítési cím</Label>
+        <Label Style="{StaticResource lblStilus}">Matek eredmény</Label>
+        <Label Style="{StaticResource lblStilus}">Magyar eredmény</Label>
+        </StackPanel>
+        <Label Style="{StaticResource lblStilus}" Margin="50px" Width="100px" HorizontalAlignment="Right" Height="30px">Felvételizett</Label>
+        <CheckBox Unchecked="felvetelizett_UnChecked" Checked="felvetelizett_Checked" x:Name="felvetelizett" IsChecked="True" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="30px" Height="30px" Margin="10px"></CheckBox>
+        <Button Style="{StaticResource gombStilus}" VerticalAlignment="Bottom" Click="txtMagyar_LostFocus" FontSize="30" Content="➔" Margin="10" x:Name="btnRogzit" Width="50" Height="50"></Button>
+    </Grid>
+    </Border>
+</Window>

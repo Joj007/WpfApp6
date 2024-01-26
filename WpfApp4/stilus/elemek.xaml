@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Style x:Key="gombStilus" TargetType="{x:Type Button}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Background" Value="{StaticResource gombszin1}"></Setter>
+        <Setter Property="BorderBrush" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource betuszin}"></Setter>
+        <Setter Property="FontSize" Value="18"></Setter>
+        <Setter Property="Height" Value="50"></Setter>
+        <Setter Property="Width" Value="250"></Setter>
+        <Setter Property="Margin" Value="10"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource gombszin2}"></Setter>
+                <Setter Property="Height" Value="55"></Setter>
+                <Setter Property="Width" Value="260"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="tbStilus" TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="{StaticResource gombszin1}"></Setter>
+        <Setter Property="BorderBrush" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource betuszin}"></Setter>
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="200"></Setter>
+        <Setter Property="Margin" Value="10"></Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource gombszin2}"></Setter>
+                <Setter Property="Height" Value="30"></Setter>
+                <Setter Property="Width" Value="200"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="dpStilus" TargetType="{x:Type DatePicker}">
+        <Setter Property="Background" Value="{StaticResource gombszin1}"></Setter>
+        <Setter Property="BorderBrush" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource betuszin}"></Setter>
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="200"></Setter>
+        <Setter Property="Margin" Value="10"></Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource gombszin2}"></Setter>
+                <Setter Property="Height" Value="30"></Setter>
+                <Setter Property="Width" Value="200"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="lblStilus" TargetType="{x:Type Label}">
+        <Setter Property="BorderBrush" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource betuszin}"></Setter>
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+        <Setter Property="Height" Value="30"></Setter>
+        <Setter Property="Width" Value="250"></Setter>
+        <Setter Property="Margin" Value="10"></Setter>
+    </Style>
+
+</ResourceDictionary>

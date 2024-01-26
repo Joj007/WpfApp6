@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="borderszin1">#21015c</Color>
+    <Color x:Key="borderszin2">#381082</Color>
+    <Color x:Key="borderszin3">#d98143</Color>
+
+    <Color x:Key="borderszin4">#090436</Color>
+    <Color x:Key="borderszin5">#2a1766</Color>
+
+    <Color x:Key="borderszin6">#1c0c40</Color>
+    <Color x:Key="borderszin7">#2f1961</Color>
+
+    <SolidColorBrush x:Key="gombszin1" Color="#4b2f8a"/>
+    <SolidColorBrush x:Key="gombszin2" Color="#603cb0"/>
+    <SolidColorBrush x:Key="betuszin" Color="#d7d4fa"/>
+
+
+</ResourceDictionary>
